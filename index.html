@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8" />
+        <title>AFormation</title>
+        <link rel="stylesheet" href="estils/estil1.css">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li class="inici"><a href="#inici">Inici</a></li>
+                <li><a href="#quisom">Qui som?</a></li>
+                <li><a href="#curs">Especialitats</a></li>
+                <li><a href="#contacte">contacte</a></li>
+            </ul>
+        </header>
+        <div class="fake" id="inici"></div>
+        <div class="slideshow">
+            <div class="mySlides fade">
+                <img src="./imatges/tecno.jpg" style="width:100%" />
+                <div class="text">
+                    <b>Formació Academica</b>
+                    <br />
+                    <a>La formació mai va estar tan a prop teu</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./imatges/slideshow22.jpg"  style="width:100%" alt="imatge de sldieshow" />
+                <div class="text" id="slide2">
+                    <a>Trobar el teu curs en nostra academia</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="imatges/slide33.jpg" style="width:100%" alt="imatge de sldieshow" />
+                <div class="text" id="slide3">
+                    <b>Tria un curs</b>
+                    <br />
+                    <a>Estudiar lo que t'agrada de veritat</a>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <script>
+                var slideIndex = 1; showSlides(slideIndex);
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+
+                }
+            </script>
+        </div>
+        <div class="imga">
+            <a href="web_en.html"><img src="./Imatges/eng.png" title="English" /></a>
+        </div>
+        <div id="quisom"></div>
+        <div class="titol">
+            <a>Sobre nosaltres</a>
+            <p>La nostra Acadèmia de Formació és un centre d'ensenyament especialitzat en una formació informatica
+            <br />
+            <br />
+             Innovant l'educació mitjançant cursos professionals de pagament, amb flexibilitat horària 
+            <br />
+            <br />
+            Amb l'objectiu d'educar a través d'una metodologia senzilla i amena. 
+            </p>
+        </div>
+        <div id="curs"></div>
+        <div class="titol">
+            <a>Cursos</a>
+        </div>
+        <section>
+            <div class="curs3d" >
+                <a class="desc">Curs de disseny 3d</a>
+                <img src="./imatges/curs3d.jpg" alt="imatge de disseny 3d"/>
+                <div class="price">
+                    <div class="e1">Duració: 
+                        <br />
+                        150 hores</div>
+                    <div class="d1">200€</div>
+                </div>
+            </div>
+            <div class="ofim">
+                <a class="desc">Curs de ofimatica</a>
+                <img src="imatges/ofimatica.png" alt="imatge de ofimatica"/>
+                <div class="price">
+                    <div class="e1">Duració: 
+                        <br />
+                        70 hores</div>
+                    <div class="d1">90€</div>
+                </div>
+            </div>
+            <div class="web">
+                <a class="desc">Curs de disseny web</a>
+                <img src="imatges/web.jpg" alt="imatge de disseny web"/>
+                <div class="price">
+                    <div class="e1">Duració: 
+                        <br />
+                        120 hores</div>
+                    <div class="d1">150€</div>
+                </div>
+            </div>
+            <div class="video">
+                <a class="desc">Curs d'edicio de video</a>
+                <img src="imatges/video.jpg" alt="imatge d'edició de video"/>
+                <div class="price">
+                    <div class="e1">Duració: 
+                        <br />
+                        120 hores</div>
+                    <div class="d1">150€</div>
+                </div>
+            </div>
+            <div class="mark">
+                <a class="desc" id="mark1">Marketing digital</a>
+                <img src="imatges/mark.jpg" alt="imatge de marketing"/>
+                <div class="price">
+                    <div class="e1">Duració: 
+                        <br />
+                        70 hores</div>
+                    <div class="d1">100€</div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="contacte"></div>
+            <div class="footleft">
+                <a id="fotitle">Més Informació</a>
+                <div class="location">
+                    <br />
+                    <b>Direcció |</b> Av.Catalunya 50
+                    <br />
+                    08930 Barcelona
+                    <br />
+                    <br />
+                    <b>Tel |</b> 932 20 03 77
+                    <br />
+                    <br />
+                    <b>Email |</b> info@AFormation.com
+                    <br />
+                    <br />
+                    <b>Horrari |</b> Dilluns a Divendres
+                    <br />
+                    <br />
+                    8.00h - 20.00h, Dissable 8.00h - 13.30h
+                </div>
+                <div class="politica">
+                    <a href="documents/politica.pdf" target="_blank"><u>Política de privacitat</u></a>
+                </div>
+                <div class="xarxes">
+                    <a href="https://es-es.facebook.com/" target="_blank"><img src="Imatges/logo-face.png" id="facebook" alt="logo de facebook"/></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="Imatges/logo-insta.png" id="insta" alt="logo de instagram"/></a>
+                    <a href="https://twitter.com/?lang=ca" target="_blank"><img src="Imatges/logo-twitter.png" id="twit" alt="logo de twitter"/></a>
+                </div>
+            </div>
+            <div class="footright">
+                <form class="form" name="alta" method="get" action="dades.php">
+                    <fieldset>
+                        <legend><b>Contactar amb nosaltres</b>
+                        <br />
+                        <br />
+                        <input id="nom" type="text" placeholder="Nom i Cognoms"/>
+                        <br />
+                        <br />
+                        <input id="mail" type="email" placeholder="Correu electrònic"/>
+                        <br />
+                        <br />
+                        <input id="numero" type="tel" placeholder="Numero de telefon">
+                        <br />
+                        <br />
+                        <textarea name="texto" rows="2" cols="17" placeholder="Petició o consulta"></textarea>
+                        <br />
+                        <br />
+                        <input id="enviar" class="form" type="submit" value="Enviar" />
+                        <input id="borrar" class="form" type="reset" value="Borrar" />
+                        </legend>
+                    </fieldset>
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>
